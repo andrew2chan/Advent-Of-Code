@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         Map<Integer, Set<Integer>> map = new HashMap<>(); // mapping is { after value: values that must come before }
 
-        try(BufferedReader reader = Files.newBufferedReader(Path.of("src/input.txt"), StandardCharsets.UTF_8)) {
+        try(BufferedReader reader = Files.newBufferedReader(Path.of("src/test.txt"), StandardCharsets.UTF_8)) {
             while(reader.ready()) { //process the mapping for correct order here
                 String line = reader.readLine();
                 if(line.isEmpty()) break;
@@ -37,10 +37,11 @@ public class Main {
                 Set<Integer> visited = new HashSet<>();
                 visited.add(Integer.parseInt(lineSplit[0])); //add the first value as visited
 
-                for(int i = 1; i < lineSplit.length; i++) { //first value will always be valid so we skip it
+                for(int i = 1; i < lineSplit.length; i++) { //first value will have no dependencies so assume it is valid
                     Integer val = Integer.parseInt(lineSplit[i]);
+                    System.out.println(val);
 
-                    //map.get(val) == null in the case that we get a value that doesn't depend on anything coming before it, we just add it to visited
+                    //map.get(val) == null in the case that we get a value that has no dependencies which is not possible since the second value MUST at least depend on the first value
                     //since our mapping is [after: everything that must come before], if the mapping of everything that must come before doesn't contain everything we have visited so far then it is not valid
                     if(map.get(val) == null || !map.get(val).containsAll(visited)) {
                         valid = false;
@@ -49,6 +50,7 @@ public class Main {
 
                     visited.add(val);
                 }
+                System.out.println();
 
                 if(valid) sum += Integer.parseInt(lineSplit[(int)Math.floor(lineSplit.length/2)]);
             }
