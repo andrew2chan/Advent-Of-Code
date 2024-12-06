@@ -40,7 +40,7 @@ public class Main {
 
             //keep going until out of bounds
             while(true) {
-                if(currPos[0] < 0 || currPos[0] >= dataArr.size() || currPos[1] < 0 || currPos[1] >= dataArr.get(currPos[0]).size()) break; // we have hit a boundary so we are done / this case is specific for the reassignment if "#"
+                //if(currPos[0] < 0 || currPos[0] >= dataArr.size() || currPos[1] < 0 || currPos[1] >= dataArr.get(currPos[0]).size()) break; // we have hit a boundary so we are done / this case is specific for the reassignment if "#"
 
                 dataArr.get(currPos[0]).set(currPos[1], "X"); //set the current position to visited denoted by X
 
