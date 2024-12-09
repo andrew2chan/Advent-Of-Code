@@ -8,7 +8,7 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         long start = System.currentTimeMillis();
-        try(BufferedReader reader = Files.newBufferedReader(Path.of("src/input.txt"), StandardCharsets.UTF_8)) {
+        try(BufferedReader reader = Files.newBufferedReader(Path.of("src/test.txt"), StandardCharsets.UTF_8)) {
             String line = reader.readLine();
 
             ArrayList<String> listOfBlock = new ArrayList<>();
@@ -35,17 +35,18 @@ public class Main {
                 }
             }
 
-            //System.out.println(listOfBlock);
+            System.out.println(listOfBlock);
 
 
             for(int i = 0; i < listOfBlock.size(); i++) {
                 if(!listOfBlock.get(i).equals(".")) { continue; }
                 int leftStartPos = i;
                 int freeSpace = 0;
-                do {
+                while(i < listOfBlock.size() && listOfBlock.get(i).equals(".")) {
                     freeSpace++;
                     i++;
-                } while(listOfBlock.get(i).equals("."));
+                }
+                if(i >= listOfBlock.size()) break;
 
                 while(!mainStack.empty()) {
                     String key = mainStack.pop();
@@ -58,7 +59,7 @@ public class Main {
                         }
                         map.remove(key);
                         i = 0;
-                        //System.out.println(listOfBlock);
+                        System.out.println(listOfBlock);
                         break;
                     }
                     tmpStack.push(key);
@@ -67,7 +68,7 @@ public class Main {
                 while(!tmpStack.empty()) mainStack.push(tmpStack.pop());
             }
 
-            //System.out.println(listOfBlock);
+            System.out.println(listOfBlock);
 
             long checkSum = 0;
             for(int i = 0; i < listOfBlock.size(); i++) {
