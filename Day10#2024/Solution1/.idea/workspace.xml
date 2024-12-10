@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4df4d8d1-2c1f-44e5-bc13-76af009f29ee" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Solution2/src/main/java/Logic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Solution2/src/main/resources/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Solution2/src/main/resources/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Solution2/src/main/resources/test2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Solution2/src/main/resources/test3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Solution2/src/main/resources/test4.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Day5#2024/Solution2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Day5#2024/Solution2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Day9#2024/Solution1/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Day9#2024/Solution1/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Day9#2024/Solution1/src/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Day9#2024/Solution1/src/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Day9#2024/Solution2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Day9#2024/Solution2/src/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2q1orRZn09e69rHOf8ZhgYvA2k5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "JUnit.MainTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/cool_/Documents/Projects/Java/Advent-Of-Code/Day10#2024/Solution1/src/main/java/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cool_\Documents\Projects\Java\Advent-Of-Code\Day10#2024\Solution1\src\main\resources" />
+      <recent name="C:\Users\cool_\Documents\Projects\Java\Advent-Of-Code\Day10#2024\Solution1\src\main\java" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4df4d8d1-2c1f-44e5-bc13-76af009f29ee" name="Changes" comment="" />
+      <created>1733839640921</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1733839640921</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Logic.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
