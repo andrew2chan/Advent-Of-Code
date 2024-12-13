@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Advent-Of-Code.iml" filepath="$PROJECT_DIR$/.idea/Advent-Of-Code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day4#2024/Solution1/Solution1.iml" filepath="$PROJECT_DIR$/Day4#2024/Solution1/Solution1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day3#2024/Solution1/Solution10.iml" filepath="$PROJECT_DIR$/Day3#2024/Solution1/Solution10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day7#2024/Solution2/Solution11.iml" filepath="$PROJECT_DIR$/Day7#2024/Solution2/Solution11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day2#2024/Solution1/Solution12.iml" filepath="$PROJECT_DIR$/Day2#2024/Solution1/Solution12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day7#2024/Solution1/Solution13.iml" filepath="$PROJECT_DIR$/Day7#2024/Solution1/Solution13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day2#2024/Solution2/Solution14.iml" filepath="$PROJECT_DIR$/Day2#2024/Solution2/Solution14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day4#2024/Solution2/Solution2.iml" filepath="$PROJECT_DIR$/Day4#2024/Solution2/Solution2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day6#2024/Solution1/Solution3.iml" filepath="$PROJECT_DIR$/Day6#2024/Solution1/Solution3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day1#2024/Solution2/Solution4.iml" filepath="$PROJECT_DIR$/Day1#2024/Solution2/Solution4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day6#2024/Solution2/Solution5.iml" filepath="$PROJECT_DIR$/Day6#2024/Solution2/Solution5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day1#2024/Solution1/Solution6.iml" filepath="$PROJECT_DIR$/Day1#2024/Solution1/Solution6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day5#2024/Solution2/Solution7.iml" filepath="$PROJECT_DIR$/Day5#2024/Solution2/Solution7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day3#2024/Solution2/Solution8.iml" filepath="$PROJECT_DIR$/Day3#2024/Solution2/Solution8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Day5#2024/Solution1/Solution9.iml" filepath="$PROJECT_DIR$/Day5#2024/Solution1/Solution9.iml" />
+    </modules>
+  </component>
+</project>

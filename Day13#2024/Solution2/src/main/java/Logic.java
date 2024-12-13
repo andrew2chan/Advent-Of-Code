@@ -39,36 +39,62 @@ public class Logic {
                 System.out.println(i);
             }*/
 
+            int tmpAnswer = 0;
             for(int i = 0; i < arr.size(); i=i+3) {
-                int tmpAnswer = 0;
-                cache = new HashMap<>();
                 List<Long> firstPair = arr.get(i);
                 List<Long> secondPair = arr.get(i+1);
-                List<Long> result = arr.get(i+2);
-                /*int ax = 0;
-                int ay = 0;
+                List<Long> result = List.of(arr.get(i+2).getFirst() + 10000000000000L, arr.get(i+2).getLast() + 10000000000000L);
+                //List<Long> result = List.of(arr.get(i+2).getFirst(), arr.get(i+2).getLast());
 
-                for(int k = 1; k <= 100; k++) {
-                    ax += firstPair.get(0);
-                    ay += firstPair.get(1);
-                    int bx = 0;
-                    int by = 0;
+                long x1 = firstPair.getFirst();
+                long y1 = firstPair.getLast();
+                long x2 = secondPair.getFirst();
+                long y2 = secondPair.getLast();
+                long rx = result.getFirst();
+                long ry = result.getLast();
 
-                    for(int j = 1; j <=100; j++) {
-                        bx += secondPair.get(0);
-                        by += secondPair.get(1);
+                /*
+                    X1 + X2 = RX
+                    Y1 + Y2 = RY
 
-                        if(ax + bx == result.get(0) && ay + by == result.get(1)) {
-                            tmpAnswer += k * 3 + j;
-                            break;
-                        }
-                    }
+                    |  X1   X2  |   =  | RX |
+                    |  Y1   Y2  |      | RY |
+                 */
+                System.out.println(result.getFirst() + " " + result.getLast());
+                //System.out.println((firstPair.getFirst() * secondPair.getLast()) + " " + (firstPair.getLast() * secondPair.getFirst() * 1.0));
+                long determinant = (x1 * y2) - (x2 * y1);
+
+                /*
+                    |  RX   X2  |
+                    |  RY   Y2  |
+                 */
+                long x = (rx * y2) - (x2 * ry);
+
+                /*
+                    |  X1   RX  |
+                    |  Y1   RY  |
+                 */
+                long y = (x1 * ry) - (rx * y1);
+                //System.out.println(determinant + " " + x + " " + y);
+
+                long calcA = x / determinant;
+                long calcB = y / determinant;
+                //System.out.println(calcA + " " + calcB);
+                //System.out.println( ((calcA * firstPair.getFirst()) + (calcB * secondPair.getFirst())) + " " + ((calcA * firstPair.getLast()) + (calcB * secondPair.getLast())) );
+
+                System.out.println("X: " + (long)((calcA * firstPair.getFirst()) + (calcB * secondPair.getFirst())));
+                System.out.println("Y: " + (long)((calcA * firstPair.getLast()) + (calcB * secondPair.getLast())));
+
+                System.out.println((calcA * x1) + (calcB * x2));
+                System.out.println(rx);
+                System.out.println((calcA * y1) + (calcB * y2));
+                System.out.println(ry);
+                if((calcA * x1) + (calcB * x2) == rx && (calcA * y1) + (calcB * y2) == ry) {
+                    System.out.println("GOOD");
+                    answer += (calcA * 3 + calcB);
                 }
-
-                answer += tmpAnswer;*/
-                tmpAnswer = recurse(firstPair, secondPair, result, 0, 0, 0);
-                if(tmpAnswer != Integer.MAX_VALUE) answer += tmpAnswer;
-                //System.out.println(answer);
+                System.out.println(answer);
+                System.out.println();
             }
         }
         catch(IOException ex) {
@@ -79,23 +105,6 @@ public class Logic {
         //System.out.println(cache);
         System.out.println((System.currentTimeMillis() - start) + "ms");
         return answer;
-    }
-
-    public int recurse(List<Long> first, List<Long> second, List<Long> result, int tokens, int aPressed, int bPressed) {
-        if(cache.get(result.getFirst() + "#" + result.getLast()) != null) return cache.get(result.getFirst() + "#" + result.getLast());
-        if(aPressed > 100 || bPressed > 100) return Integer.MAX_VALUE;
-        if(result.getFirst() < 0 || result.getLast() < 0) return Integer.MAX_VALUE; //we are past result so no solution
-        if(result.getFirst() == 0 && result.getLast() == 0) {
-            return tokens;
-        }
-
-        Integer resultA = recurse(first, second, List.of(result.getFirst() - first.getFirst(), result.getLast() - first.getLast()), tokens + 3, aPressed + 1 ,bPressed);
-        Integer resultB = recurse(first, second, List.of(result.getFirst() - second.getFirst(), result.getLast() - second.getLast()), tokens + 1, aPressed, bPressed + 1);
-
-        cache.put(result.getFirst() + "#" + result.getLast(), Math.min(resultA, resultB));
-
-        return Math.min(resultA, resultB);
-
     }
 
 }

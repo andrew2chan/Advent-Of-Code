@@ -7,6 +7,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        long start = System.currentTimeMillis();
         Map<Integer, Set<Integer>> map = new HashMap<>(); // mapping is { after value: values that must come before }
 
         try(BufferedReader reader = Files.newBufferedReader(Path.of("src/input.txt"), StandardCharsets.UTF_8)) {
@@ -26,8 +27,6 @@ public class Main {
                 }
             }
 
-            System.out.println(map.toString());
-
             int sum = 0;
             while(reader.ready()) { //read the actual lists
                 String line = reader.readLine();
@@ -40,10 +39,10 @@ public class Main {
                     Set<Integer> visited = new HashSet<>();
                     visited.add(Integer.parseInt(lineSplit[0])); //add the first value as visited
 
-                    for(int i = 1; i < lineSplit.length; i++) { //first value will always be valid so we skip it
+                    for(int i = 1; i < lineSplit.length; i++) { //first value will have no dependencies so assume it is valid
                         Integer val = Integer.parseInt(lineSplit[i]);
 
-                        //map.get(val) == null in the case that we get a value that doesn't depend on anything coming before it, we just add it to visited
+                        //map.get(val) == null in the case that we get a value that has no dependencies which is not possible since the second value MUST at least depend on the first value
                         //since our mapping is [after: everything that must come before], if the mapping of everything that must come before doesn't contain everything we have visited so far then it is not valid
                         if(map.get(val) == null || !map.get(val).containsAll(visited)) {
                             issue = true;
@@ -63,6 +62,7 @@ public class Main {
                 if(issue) sum += Integer.parseInt(lineSplit[(int)Math.floor(lineSplit.length/2)]);
             }
 
+            System.out.println((System.currentTimeMillis() - start)/1000.0);
             System.out.println(sum);
         }
         catch(IOException ex) {

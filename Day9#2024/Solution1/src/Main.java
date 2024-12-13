@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        try(BufferedReader reader = Files.newBufferedReader(Path.of("src/input.txt"), StandardCharsets.UTF_8)) {
+        try(BufferedReader reader = Files.newBufferedReader(Path.of("src/test.txt"), StandardCharsets.UTF_8)) {
             String line = reader.readLine();
 
             List<String> listOfBlock = new ArrayList<>();
@@ -41,7 +41,7 @@ public class Main {
                 listOfBlock.set(right, ".");
             }
 
-            //System.out.println(listOfBlock);
+            System.out.println(listOfBlock);
 
             long checkSum = 0;
             for(int i = 0; i < listOfBlock.size(); i++) {

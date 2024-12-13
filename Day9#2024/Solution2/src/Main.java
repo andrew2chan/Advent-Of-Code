@@ -35,7 +35,7 @@ public class Main {
                 }
             }
 
-            System.out.println(listOfBlock);
+            //System.out.println(listOfBlock);
 
 
             for(int i = 0; i < listOfBlock.size(); i++) {
@@ -50,7 +50,7 @@ public class Main {
 
                 while(!mainStack.empty()) {
                     String key = mainStack.pop();
-                    if(map.get(key).size() <= freeSpace) {
+                    if(map.get(key) != null && map.get(key).size() <= freeSpace) {
                         if(leftStartPos > map.get(key).getFirst()) break;
                         for(int k = 0; k < map.get(key).size(); k++) {
                             listOfBlock.set(leftStartPos, key);
@@ -59,7 +59,7 @@ public class Main {
                         }
                         map.remove(key);
                         i = 0;
-                        System.out.println(listOfBlock);
+                        //System.out.println(listOfBlock);
                         break;
                     }
                     tmpStack.push(key);
